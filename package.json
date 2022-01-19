@@ -3,6 +3,7 @@
   "name": "remix-app-template",
   "main": "./dist/worker.js",
   "scripts": {
+    "generate": "PRISMA_CLIENT_ENGINE_TYPE=dataproxy npx prisma generate",
     "clean": "rimraf .cache .mf build dist",
     "dev": "npm run build:remix && cross-env NODE_ENV=development concurrently \"npm:dev:*\"",
     "dev:remix": "remix watch",
